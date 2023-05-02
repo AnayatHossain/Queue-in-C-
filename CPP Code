@@ -1,0 +1,90 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int queue[100]; // Array to store queue elements
+    int front = 0, rear = -1; // Initialize front and rear of queue
+    int n; // Number of elements to be enqueued
+    int element; // Element to be enqueued
+
+    // Get number of elements to be enqueued
+    cout << "Enter number of elements to be enqueued: ";
+    cin >> n;
+
+    // Enqueue elements into queue
+    for (int i = 0; i < n; i++) {
+        cout << "Enter element " << i+1 << ": ";
+        cin >> element;
+        queue[++rear] = element;
+    }
+
+    // Print elements in queue
+    for (int i = front; i <= rear; i++) {
+        cout << queue[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+
+//Incersion
+#include <iostream>
+using namespace std;
+
+int main() {
+    int queue[100]; // Array to store queue elements
+    int front = 0, rear = -1; // Initialize front and rear of queue
+    int n; // Number of elements to be enqueued
+
+    // Get number of elements to be enqueued
+    cout << "Enter number of elements to be enqueued: ";
+    cin >> n;
+
+    // Enqueue elements into queue
+    for (int i = 0; i < n; i++) {
+        int element;
+        cout << "Enter element " << i+1 << ": ";
+        cin >> element;
+        queue[++rear] = element;
+    }
+
+    // Print queue elements
+    cout << "Queue elements: ";
+    for (int i = front; i <= rear; i++) {
+        cout << queue[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+
+
+//Deletion
+#include <iostream>
+using namespace std;
+
+int main() {
+    int queue[100]; // Array to store queue elements
+    int front = 0, rear = -1; // Initialize front and rear of queue
+    int n; // Number of elements to be enqueued
+
+    // Get number of elements to be enqueued
+    cout << "Enter number of elements to be enqueued: ";
+    cin >> n;
+
+    // Enqueue elements into queue
+    for (int i = 0; i < n; i++) {
+        int element;
+        cout << "Enter element " << i+1 << ": ";
+        cin >> element;
+        queue[++rear] = element;
+    }
+
+    // Dequeue elements from queue
+    while (front <= rear) {
+        cout << queue[front++] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
